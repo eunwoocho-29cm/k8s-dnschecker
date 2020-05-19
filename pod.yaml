@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: dnschecker
+  name: dnschecker
+  annotations:
+    devops/owner: ewcho
+spec:
+  containers:
+  - image: jonnung/dnschecker:latest
+    name: dnschecker
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
